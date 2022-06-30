@@ -18,6 +18,7 @@ class AuthController extends GetxController {
     update();
   }
 
+  // login function
   Future login(String email, String passwordIn) async {
     if (loginFormKey.currentState!.validate()) {
       await AuthApi().loginAPI(email.trim(), passwordIn);

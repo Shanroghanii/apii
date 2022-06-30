@@ -6,7 +6,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
 
 Future<void> main() async {
-  await GetStorage.init();
+  await GetStorage.init(); // Get Storage Initialized
   runApp(const MyApp());
 }
 
@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
-      theme: AppThemes.lightTheme,
+      theme: AppThemes.lightTheme, // theme class
       home: const SplashView(),
-      initialBinding: ServicesBinder(),
+      initialBinding: ServicesBinder(), // initial binding
     );
   }
 }

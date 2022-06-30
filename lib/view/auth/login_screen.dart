@@ -169,10 +169,7 @@ class LoginScreen extends StatelessWidget {
                             TextSpan(
                               text: ' Register now',
                               style: const TextStyle(color: Colors.green),
-                              recognizer: TapGestureRecognizer()
-                                ..onTap = () {
-                                  // Single tapped.
-                                },
+                              recognizer: TapGestureRecognizer()..onTap = () {},
                             ),
                           ],
                         ),

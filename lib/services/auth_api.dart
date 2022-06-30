@@ -1,20 +1,22 @@
 import 'dart:convert';
 import 'package:apii/view/home/home_screen.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
 
 class AuthApi extends GetxService {
   final box = GetStorage();
+
   // Login API
   String url = "http://buddy.ropstambpo.com/api/login";
+
   Future loginAPI(String email, String password) async {
     String deviceToken = "zasdcvgtghnkiuhgfde345tewasdfghjkm";
     // String email=  "hassan.zafar@ropstam.com";
     // String password = "12345678";
     try {
-      // ignore: prefer_typing_uninitialized_variables
-      var jsonData;
+      var jsonData = {};
       var data = await http.post(
         Uri.parse(url),
         body: {
@@ -44,10 +46,11 @@ class AuthApi extends GetxService {
     }
   }
 
+  //
   Future autoLogin() async {
     String token = await box.read("token");
     try {
-      var jsonData;
+      var jsonData = {};
       var data = await http.get(Uri.parse(url), headers: {
         'Accept': 'application/json',
         'Authorization': 'Bearer $token',
@@ -56,13 +59,21 @@ class AuthApi extends GetxService {
       if (data.statusCode == 200) {
         /// assign user data to user model...
         /// Navigate to home page
-        print(jsonData);
-        print("Show success msg");
+        if (kDebugMode) {
+          print(jsonData);
+        }
+        if (kDebugMode) {
+          print("Show success msg");
+        }
       } else {
-        print("Show error msg");
+        if (kDebugMode) {
+          print("Show error msg");
+        }
       }
     } on Exception catch (_) {
-      print("Show error msg");
+      if (kDebugMode) {
+        print("Show error msg");
+      }
     }
   }
 }
