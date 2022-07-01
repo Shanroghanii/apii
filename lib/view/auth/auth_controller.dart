@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 
 import '../../services/auth_api.dart';
 
@@ -11,7 +10,7 @@ class AuthController extends GetxController {
 
   bool hidePassword = true;
 
-  final box = GetStorage();
+  // final box = GetStorage();
 
   togglePassword() {
     hidePassword = !hidePassword;
