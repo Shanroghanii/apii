@@ -58,7 +58,7 @@ class LoginScreen extends StatelessWidget {
                                 hintText: "Enter email",
                               ),
                               validator: (val) {
-                                return controller.validateUserName(val!);
+                                return controller.validateEmail(val!);
                               },
                             ),
                             SizedBox(
