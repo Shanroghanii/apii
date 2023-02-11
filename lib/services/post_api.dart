@@ -20,9 +20,6 @@ class PostApi extends GetxService {
       if (data.statusCode == 200) {
         List<PostModel> list =
             List<PostModel>.from(jsonData.map((x) => PostModel.fromJson(x)));
-        if (kDebugMode) {
-          print(list.first.body);
-        }
         return list;
       } else {
         if (kDebugMode) {

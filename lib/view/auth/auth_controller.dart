@@ -33,7 +33,7 @@ class AuthController extends GetxController {
     return null;
   }
 
-  String? validateUserName(String value) {
+  String? validateEmail(String value) {
     if (value.isEmpty) {
       return 'email is required';
     } else if (!GetUtils.isEmail(value.trim())) {

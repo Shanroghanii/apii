@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: 'Dashy',
       theme: AppThemes.lightTheme, // theme class
       home: const SplashView(),
       initialBinding: ServicesBinder(), // initial binding

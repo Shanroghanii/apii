@@ -130,24 +130,24 @@ class LoginScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Container(
-                                height: Get.width * 0.15,
-                                width: Get.width * 0.15,
+                                height: context.width * 0.15,
+                                width: context.width * 0.15,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     color: Colors.transparent,
                                     border: Border.all(color: Colors.white)),
                                 child: Image.asset("assets/google.png")),
                             Container(
-                                height: Get.width * 0.15,
-                                width: Get.width * 0.15,
+                                height: context.width * 0.15,
+                                width: context.width * 0.15,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     color: Colors.transparent,
                                     border: Border.all(color: Colors.white)),
                                 child: Image.asset("assets/apple.png")),
                             Container(
-                                height: Get.width * 0.15,
-                                width: Get.width * 0.15,
+                                height: context.width * 0.15,
+                                width: context.width * 0.15,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     color: Colors.transparent,
